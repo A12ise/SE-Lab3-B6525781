@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบจัดการข้อมูลอาจารย์</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    /* Navigation bar styling */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h1 {
+      margin: 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    /* Main container */
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form styling */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    /* Button styling */
+    .button-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .button-primary {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .button-secondary {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>ระบบจัดการข้อมูลอาจารย์</h1>
+    <nav>
+      <a href="#">เพิ่มอาจารย์</a>
+      <a href="#">ค้นหาอาจารย์</a>
+      <a href="#">อัปเดตข้อมูล</a>
+      <a href="#">ลบข้อมูล</a>
+    </nav>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h2>เพิ่มข้อมูลอาจารย์ใหม่</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">ชื่ออาจารย์:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">อีเมล:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">เบอร์โทร:</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="department">แผนก/สาขา:</label>
+        <select id="department" name="department">
+          <option value="science">วิทยาศาสตร์</option>
+          <option value="arts">ศิลปศาสตร์</option>
+          <option value="engineering">วิศวกรรมศาสตร์</option>
+          <!-- เพิ่มตัวเลือกแผนกอื่นๆ ได้ตามต้องการ -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="status">สถานะ:</label>
+        <select id="status" name="status">
+          <option value="active">ปัจจุบัน</option>
+          <option value="retired">เกษียณ</option>
+          <option value="leave">ลาออก</option>
+        </select>
+      </div>
+
+      <!-- Button Group -->
+      <div class="button-group">
+        <button type="submit" class="button-primary">บันทึกข้อมูล</button>
+        <button type="reset" class="button-secondary">ล้างข้อมูล</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
